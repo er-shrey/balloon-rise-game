@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+  <title>Balloon Rise</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game-container">
+    <canvas id="game-canvas"></canvas>
+
+    <div id="hud" class="hidden">
+      <div class="hud-left">
+        <span class="hud-label">SCORE</span>
+        <span id="score-display">0</span>
+      </div>
+      <div class="hud-center">
+        <span class="hud-label">BEST</span>
+        <span id="high-score-display">0</span>
+      </div>
+      <div class="hud-right">
+        <button id="mute-btn" class="icon-btn" aria-label="Toggle sound">🔊</button>
+        <button id="pause-btn" class="icon-btn" aria-label="Pause game">⏸</button>
+      </div>
+    </div>
+
+    <div id="status-bar" class="hidden">
+      <div id="lives-display"></div>
+      <div id="powerup-display"></div>
+      <div id="colored-timer" class="hidden">
+        <span class="timer-label">COLOR</span>
+        <div class="timer-bar"><div id="colored-bar-fill"></div></div>
+        <span id="colored-time">15</span>
+      </div>
+    </div>
+
+    <div id="start-screen" class="overlay">
+      <div class="overlay-content">
+        <h1 class="game-title">BALLOON RISE</h1>
+        <p class="game-subtitle">Retro Arcade</p>
+        <div class="instructions">
+          <p>Move left &amp; right to rise</p>
+          <p>Collect bubbles · Avoid spikes</p>
+          <p>← → or mouse/touch to steer</p>
+        </div>
+        <button id="start-btn" class="btn-primary">START</button>
+        <p class="best-score">BEST: <span id="start-high-score">0</span></p>
+      </div>
+    </div>
+
+    <div id="pause-screen" class="overlay hidden">
+      <div class="overlay-content">
+        <h2>PAUSED</h2>
+        <button id="resume-btn" class="btn-primary">RESUME</button>
+        <button id="restart-pause-btn" class="btn-secondary">RESTART</button>
+      </div>
+    </div>
+
+    <div id="gameover-screen" class="overlay hidden">
+      <div class="overlay-content">
+        <h2>GAME OVER</h2>
+        <p class="final-score-label">SCORE</p>
+        <p id="final-score" class="final-score">0</p>
+        <p class="best-score">BEST: <span id="gameover-high-score">0</span></p>
+        <button id="play-again-btn" class="btn-primary">PLAY AGAIN</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js"></script>
+</body>
+</html>
