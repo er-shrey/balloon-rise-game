@@ -160,3 +160,9 @@ The output lands at `android/app/build/outputs/apk/debug/Balloon-Rise-debug.apk`
   synthesised with the Web Audio API, so the whole game is three files and a few hundred KB.
 - `hot-air-balloon.png` (512×512) is the source image behind the Android launcher icon and splash.
 - High scores are per-device, stored under the `balloon_high_score` key in `localStorage`.
+
+---
+
+## License
+
+[MIT](LICENSE) © er-shrey
